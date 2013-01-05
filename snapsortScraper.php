@@ -23,8 +23,8 @@ class snapsortScraper {
 				}
 				if($tbody->find("a",0)->plaintext != null){
 					$specName = ($tbody->find("th",0)->plaintext == "")? "Model" : $tbody->find("th",0)->plaintext;
-					$cam1[$heading][$specName] = '"'.$tbody->find("a",0)->plaintext.'"';
-					$cam2[$heading][$specName] = '"'.$tbody->find("a",1)->plaintext.'"';
+					$cam1[$heading][$specName] = $tbody->find("a",0)->plaintext;
+					$cam2[$heading][$specName] = $tbody->find("a",1)->plaintext;
 				}
 			}
 			$allCameras[] = $cam1;

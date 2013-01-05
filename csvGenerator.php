@@ -20,7 +20,7 @@ class csvGenerator {
 			foreach($data as $name => $value){
 				fwrite($this->fileHandler, $name);
 				foreach($allCameras as $camera){
-					fwrite($this->fileHandler, ",".$camera[$heading][$name]);
+					fwrite($this->fileHandler, ',"'.$camera[$heading][$name].'"');
 				}
 				fwrite($this->fileHandler, "\n");
 			}
